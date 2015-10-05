@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Hipoteca">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2f36ff"
+        android:layout_alignTop="@+id/calcMes"></LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        android:id="@+id/calcular"
+        android:onClick="onClick"
+        android:layout_below="@+id/diferencial"
+        android:layout_centerHorizontal="true"
+        android:textColor="#2f36ff" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preu inmoble (€)"
+        android:id="@+id/textView"
+        android:textColor="#2f36ff"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estalvis"
+        android:id="@+id/textView2"
+        android:textColor="#2f36ff"
+        android:layout_above="@+id/plaz"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plaç (anys)"
+        android:id="@+id/textView3"
+        android:textColor="#2f36ff"
+        android:layout_above="@+id/euribor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Euribor"
+        android:id="@+id/textView4"
+        android:textColor="#2f36ff"
+        android:layout_above="@+id/diferencial"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diferencial"
+        android:id="@+id/textView5"
+        android:textColor="#2f36ff"
+        android:layout_alignBottom="@+id/diferencial"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/estalvis"
+        android:layout_above="@+id/plaz"
+        android:layout_alignLeft="@+id/plaz"
+        android:layout_alignStart="@+id/plaz"
+        android:text="2000"
+        android:textColor="#2f36ff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/preuInmoble"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/calcMes"
+        android:layout_toEndOf="@+id/calcMes"
+        android:text="120000"
+        android:textColor="#2f36ff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/plaz"
+        android:layout_above="@+id/euribor"
+        android:layout_alignLeft="@+id/euribor"
+        android:layout_alignStart="@+id/euribor"
+        android:text="30"
+        android:textColor="#2f36ff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/euribor"
+        android:layout_above="@+id/diferencial"
+        android:layout_toRightOf="@+id/calcMes"
+        android:layout_toEndOf="@+id/calcMes"
+        android:text="0.163"
+        android:textColor="#2f36ff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/diferencial"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/euribor"
+        android:layout_alignStart="@+id/euribor"
+        android:text="2.5"
+        android:textColor="#2f36ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Cuota Mensual"
+        android:id="@+id/calcMes"
+        android:layout_below="@+id/calcular"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp"
+        android:layout_toLeftOf="@+id/calcular"
+        android:layout_toStartOf="@+id/calcular"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Anual"
+        android:id="@+id/calcTotal"
+        android:layout_alignTop="@+id/calcMes"
+        android:layout_alignRight="@+id/diferencial"
+        android:layout_alignEnd="@+id/diferencial"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textIsSelectable="true" />
+
+</RelativeLayout>
